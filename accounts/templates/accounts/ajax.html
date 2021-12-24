@@ -1,0 +1,277 @@
+<script>
+
+
+    $("#id_username").keyup(function (e) {
+        console.log("Oka ");
+        const usernameVal = e.target.value;
+        console.log(usernameVal);
+        let csrf = $("input[name=csrfmiddlewaretoken]").val();
+        const feedBackDiv = document.querySelector(".invalid-feedback");
+
+        id_username.classList.remove('is-valid');
+        id_username.classList.remove('is-invalid');
+        feedBackDiv.style.display = 'block';
+
+        mydata = {username: usernameVal, csrfmiddlewaretoken: csrf};
+        $.ajax({
+            url: "{% url 'validate-username' %}",
+            method: "POST",
+            data: mydata,
+            success: function (data) {
+                console.log(data)
+                if (data.username_error) {
+                    id_username.classList.add('is-invalid')
+                    feedBackDiv.style.display = 'block'
+                    feedBackDiv.style.color = 'red'
+                    feedBackDiv.innerHTML = `<p>${data.username_error}</p>`
+
+
+                } else if (data.username_valid) {
+                    id_username.classList.add('is-valid')
+                    feedBackDiv.style.display = 'block'
+                    feedBackDiv.style.color = 'green'
+                    feedBackDiv.innerHTML = `<p>${data.username_valid}</p>`
+                } else {
+                    id_username.classList.remove('is-valid')
+                    id_username.classList.remove('is-invalid')
+                }
+            },
+        });
+    });
+
+    $("#id_email").keyup(function (e) {
+        console.log("Okay i am in email field");
+        const emailVal = e.target.value;
+        console.log(emailVal);
+        let csrf = $("input[name=csrfmiddlewaretoken]").val();
+        const validateEmailDiv = document.querySelector(".invalid-email-feedback");
+        id_email.classList.remove('is-invalid');
+        id_email.classList.remove('is-valid');
+
+
+        mydata = {email: emailVal, csrfmiddlewaretoken: csrf};
+        $.ajax({
+            url: "{% url 'validate-email' %}",
+            method: "POST",
+            data: mydata,
+            success: function (data) {
+                console.log(data);
+                if (data.email_error) {
+                    id_email.classList.add('is-invalid');
+                    validateEmailDiv.style.display = "block";
+                    validateEmailDiv.style.color = "red";
+                    validateEmailDiv.innerHTML = `<p>${data.email_error}</p>`;
+                } else if (data.email_valid) {
+                    validateEmailDiv.style.display = "block";
+                    validateEmailDiv.style.color = "green";
+                    id_email.classList.add('is-valid');
+                    validateEmailDiv.innerHTML = `<p>${data.email_valid}</p>`;
+                }
+            }
+        });
+
+    });
+
+
+    $("#id_password2").keyup(function (e) {
+        console.log("password up");
+        const confirmPasswordVal = e.target.value;
+        const password = $("#id_password1").val();
+        console.log(confirmPasswordVal, password);
+        let csrf = $("input[name=csrfmiddlewaretoken]").val();
+        const validatePassword1Div = document.querySelector(".invalid-password1-feedback");
+        const validatePassword2Div = document.querySelector(".invalid-password2-feedback");
+
+        id_password1.classList.remove('is-invalid');
+        id_password2.classList.remove('is-invalid');
+        id_password1.classList.remove('is-valid');
+        id_password2.classList.remove('is-valid');
+
+        myCPData = {password: password, confirmPassword: confirmPasswordVal, csrfmiddlewaretoken: csrf};
+        $.ajax({
+            url: "{% url 'confirm-password' %}",
+            method: "POST",
+            data: myCPData,
+            success: function (data) {
+                console.log(data)
+                if (data.password_matched) {
+                    id_password1.classList.add('is-valid');
+                    id_password2.classList.add('is-valid');
+                    validatePassword1Div.style.display = 'none';
+                    validatePassword2Div.style.display = 'none';
+
+                } else if (data.password_unMatched) {
+                    id_password1.classList.add('is-invalid');
+                    id_password2.classList.add('is-invalid');
+                    validatePassword1Div.style.display = 'block';
+                    validatePassword1Div.style.color = 'red';
+                    validatePassword1Div.innerHTML = `<p>${data.password_unMatched}</p>`;
+                    validatePassword2Div.style.display = 'block';
+                    validatePassword2Div.style.color = 'red';
+                    validatePassword2Div.innerHTML = `<p>${data.password_unMatched}</p>`;
+
+                } else {
+                    validatePassword1Div.style.display = 'none';
+                    validatePassword2Div.style.display = 'none';
+                    id_password1.classList.remove('is-invalid');
+                    id_password2.classList.remove('is-invalid');
+                    id_password1.classList.remove('is-valid');
+                    id_password2.classList.remove('is-valid');
+                }
+
+            }
+        });
+    });
+
+    $("#id_password1").keyup(function (e) {
+        console.log("password up");
+        const confirmPasswordVal = e.target.value;
+        const password = $("#id_password2").val();
+        console.log(confirmPasswordVal, password);
+        let csrf = $("input[name=csrfmiddlewaretoken]").val();
+        const validatePassword1Div = document.querySelector(".invalid-password1-feedback");
+        const validatePassword2Div = document.querySelector(".invalid-password2-feedback");
+
+        id_password1.classList.remove('is-invalid')
+        id_password2.classList.remove('is-invalid')
+        id_password1.classList.remove('is-valid')
+        id_password2.classList.remove('is-valid')
+
+        myCPData = {password: password, confirmPassword: confirmPasswordVal, csrfmiddlewaretoken: csrf};
+        $.ajax({
+            url: "{% url 'confirm-password' %}",
+            method: "POST",
+            data: myCPData,
+            success: function (data) {
+                console.log(data)
+                if (data.password_matched) {
+                    id_password1.classList.add('is-valid');
+                    id_password2.classList.add('is-valid');
+                    validatePassword1Div.style.display = 'none';
+                    validatePassword2Div.style.display = 'none';
+                } else if (data.password_unMatched) {
+                    id_password1.classList.add('is-invalid');
+                    id_password2.classList.add('is-invalid');
+                    validatePassword1Div.style.display = 'block';
+                    validatePassword1Div.style.color = 'red';
+                    validatePassword1Div.innerHTML = `<p>${data.password_unMatched}</p>`;
+                    validatePassword2Div.style.display = 'block';
+                    validatePassword2Div.style.color = 'red';
+                    validatePassword2Div.innerHTML = `<p>${data.password_unMatched}</p>`;
+                } else {
+                    {#confirmPasswordDiv.style.display='none'#}
+                    id_password1.classList.remove('is-invalid')
+                    id_password2.classList.remove('is-invalid')
+                    id_password1.classList.remove('is-valid')
+                    id_password2.classList.remove('is-valid')
+                }
+
+            }
+        });
+    });
+
+    {#    Submit form #}
+    $(document).on('submit', "#submit_registration_form", function (event) {
+
+        event.preventDefault();
+
+        var submit_registration_form = $("#submit_registration_form");
+
+        s_data = submit_registration_form.serializeArray();
+
+        console.log(s_data);
+
+        let csrf = $("input[name=csrfmiddlewaretoken]").val();
+
+
+        send_data = {
+            submit_registration_form: JSON.stringify(s_data),
+            csrfmiddlewaretoken: csrf
+        }
+
+        $.ajax({
+            url:{% url 'register' %},
+            type: 'POST',
+            data: send_data,
+            dataType: 'json',
+            success: function (data) {
+                var success = data.status;
+                if (success) {
+                    function otpVerify() {
+                        Swal.fire({
+                                icon: 'success',
+                                title: 'Verify your email with OTP sent to your mail',
+                                input: 'text',
+                                inputAttributes: {
+                                    autocapitalize: 'off'
+                                },
+                                showCancelButton: false,
+                                confirmButtonText: 'Verify',
+                                showLoaderOnConfirm: true,
+                                preConfirm: (login) => {
+                                    if (login === data.otp) {
+                                        var active_data = {status: true, csrfmiddlewaretoken: csrf, userID: data.userID}
+                                        $.ajax({
+                                            url:{% url 'activateUser' %},
+                                            type: 'POST',
+                                            data: active_data,
+                                            dataType: 'json',
+                                            success: function (status) {
+                                                if (status) {
+                                                    Swal.fire({
+                                                        icon: 'success',
+                                                        title: 'Verified successfully!, redirecting you to login',
+                                                    });
+                                                    setTimeout(() => {
+                                                        window.location.href = '/login';
+                                                    }, 2000);
+                                                } else {
+                                                    Swal.fire({
+                                                        icon: 'error',
+                                                        title: 'There is an Error',
+                                                    });
+                                                }
+                                            }
+                                        });
+
+                                    } else {
+                                        Swal.fire({
+                                            icon: 'error',
+                                            title: 'OTP invalid',
+                                            timer: 2000,
+                                            timerProgressBar: true,
+                                        });
+
+                                        setTimeout(() => {
+                                                otpVerify();
+                                            }, 2000
+                                        );
+
+                                    }
+
+                                }
+                                ,
+                                allowOutsideClick: () => !Swal.isLoading()
+                            }
+                        )
+                    }
+
+                    otpVerify();
+                } else {
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'error',
+                        title: 'There is an error creating your account, make sure you have filled data correctly',
+                        showConfirmButton: false,
+                        timer: 3500
+                    })
+                }
+            },
+            failure: function (error) {
+                alert("Error")
+            }
+        })
+    });
+
+
+</script>

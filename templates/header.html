@@ -1,0 +1,39 @@
+{% load static %}
+<div class="header">
+    <div class="header_right">
+        <ul class="pl-1">
+            <li class="ui dropdown">
+                <a href="#" class="account_dropdown">
+                    <img src="{% static 'uploads/user.svg' %}" alt="">
+                </a>
+                <div class="menu dropdown_account">
+                    <div class="profile_dropdown_content">
+                        <div class="profile_link">
+                            <img src="{% static 'uploads/user.svg' %}" alt="">
+                            <div class="pd_content">
+                                <div class="pd_name">
+                                    <h6>{{ request.user.username }} </h6>
+                                    <div class="pd_verify" title="Verify">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                </div>
+                                <span>{{ request.user.email }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    {% if request.user.is_staff and not request.user.is_superuser %}
+                        <a href="/instructor/dashboard" class="item channel_item">Dashboard</a>
+                        <a href="/instructor/dashboard" class="item channel_item">Setting</a>
+                    {% elif request.user.is_superuser %}
+                        <a href="/admin/dashboard" class="item channel_item">Dashboard</a>
+                        <a href="/admin/dashboard" class="item channel_item">Setting</a>
+                    {% else %}
+                        <a href="/student/dashboard" class="item channel_item">Dashboard</a>
+                        <a href="/student/dashboard" class="item channel_item">Setting</a>
+                    {% endif %}
+                    <a href="/logout" class="item channel_item">Sign Out</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

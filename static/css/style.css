@@ -1,0 +1,1885 @@
+
+* {
+    font-family: 'Poppins', sans-serif;
+
+}
+
+:root {
+    --color-black: #000000 !important;
+    --color-white: #ffffff !important;
+    --color-primary: #06b106 !important;
+    --color-light-gray: #757575 !important;
+    --color-navbar: #82807f !important;
+    --color-secondary: #82807f !important;
+}
+
+/*bootstrap modification*/
+
+textarea:focus,
+select:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+    outline: 0 none;
+    border: none;
+    background: none !important;
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.59);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.59);
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.59);
+}
+
+
+.container-fluid {
+    padding: 0 !important;
+}
+
+.rounded {
+    border-radius: 15px !important;
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+.btn-secondary {
+    background: var(--color-white);
+    color: var(--color-black);
+    border: 2px solid var(--color-primary) !important;
+}
+
+.float-end {
+    float: right !important;
+}
+
+.pt-6 {
+    padding-top: 4rem !important;
+}
+
+.pt-7 {
+    padding-top: 5rem !important;
+}
+
+.ml-25 {
+    margin-left: 15% !important;
+}
+
+.text-white{
+    color: white !important;
+}
+
+/*Bootstrap modification end*/
+
+
+/*Ck editor start*/
+
+#cke_id_course_description {
+    width: auto !important;
+}
+
+#cke_id_topic_content {
+    width: auto !important;
+}
+
+#cke_id_course_requirements {
+    width: auto !important;
+}
+
+#cke_id_course_audience {
+    width: auto !important;
+}
+
+#cke_id_course_outcome {
+    width: auto !important;
+}
+
+
+/*Ck editor end*/
+
+
+/*Logo Section*/
+
+.logo-first {
+    color: var(--color-primary);
+}
+
+.logo-second {
+    color: var(--color-primary);
+}
+
+.logo:link, .navbar a:link {
+    text-decoration: none;
+}
+
+.logo span {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 32px;
+}
+
+/*Logo section end*/
+
+/*Header Start*/
+
+#home-header {
+    margin-right: 0%;
+}
+
+.header {
+    margin-left: 0px !important;
+    z-index: 100;
+
+}
+
+.bg-header {
+    background: var(--color-white);
+}
+
+/*.fa-bars {*/
+/*    display: flex;*/
+/*    margin-top: 20px;*/
+/*}*/
+
+
+a {
+    color: var(--color-navbar);
+}
+
+div.navbar.col-md-2.float-right {
+
+    padding: 8px 0px !important;
+}
+
+/*Header end*/
+
+/*Banner start*/
+
+.banner-title {
+    color: var(--color-primary);
+}
+
+.banner-subtitle {
+    color: var(--color-light-gray);
+}
+
+.nav-space {
+    height: 100px !important;
+}
+
+/* divisions */
+.section-first {
+    margin-top: 100px !important;
+}
+
+
+/*Media Query Start*/
+@media (max-width: 380px) {
+    .logo span {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 990px) {
+    .header-btn {
+        margin-top: 10px;
+    }
+}
+
+/*For global use*/
+
+.fixed {
+    position: fixed !important;
+    width: 100% !important;
+    /*z-index: 100;*/
+}
+
+.no-border {
+    border: 0 !important;
+}
+
+.border {
+    border: 1px solid var(--color-primary) !important;
+}
+
+.field-shadow {
+    -webkit-box-shadow: 9px 9px 9px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 9px 9px 9px -9px rgba(0, 0, 0, 0.75);
+    box-shadow: 9px 9px 9px -9px rgba(0, 0, 0, 0.75);
+
+}
+
+.down-shadow {
+    -webkit-box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.75);
+}
+
+.field-background {
+    background: #cccccc !important;
+}
+
+/*Thumbnail for course builder*/
+.thumbnail-info p {
+    color: var(--color-light-gray);
+}
+
+
+input#id_thumbnail {
+    display: block !important;
+}
+
+.thumbnail-image {
+    width: 290px !important;
+    height: 180px;
+}
+
+.img-thumbnail {
+    width: 290px !important;
+    height: 180px !important;
+    max-width: 290px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    object-fit: contain;
+
+}
+
+.thumbnail-info input[type='file'] {
+    display: none;
+}
+
+/*Thumbnail for course builder end*/
+
+/* Toggle course add content division start*/
+
+.toggle-section {
+    width: auto;
+    height: auto;
+}
+
+.bg-toggle-primary {
+    background-color: #bbbcbd !important;
+}
+
+.bg-toggle-secondary {
+    background-color: #ffffff !important;
+}
+
+/* Toggle course add content division end*/
+
+
+/*For global use end*/
+
+
+/*@media (max-width:1306px)and (min-width:980px) {*/
+/*.signInUP{*/
+/*    position: absolute;*/
+/*    width: 300px;*/
+
+/*    margin-left: -40px;*/
+/*}*/
+/*}*/
+
+@media (max-width: 767px) {
+    .thumbnail-button {
+        margin-top: 0px !important;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+    .thumbnail-info {
+        margin-top: 200px;
+        margin-left: -307px !important;
+    }
+
+    #add-btn {
+        margin: 10px !important;
+    }
+
+}
+
+/*Registration field validation */
+.invalid-password1-feedback, .invalid-password2-feedback, .invalid-email-feedback {
+    font-size: 80%;
+}
+
+
+/*
+Multiform start
+*/
+
+
+/*Front end course showcase*/
+
+.course-description-frontend {
+    display: block;
+    height: 100px;
+    width: 118% !important;
+    overflow: hidden;
+    /*white-space: nowrap;*/
+    /*text-overflow: ellipsis;*/
+}
+
+.entprep-card {
+    background: #fff;
+    float: left;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #efefef;
+    transition: all .2s ease-in-out;
+    width: 345.5px;
+    margin-right: 20px;
+
+}
+
+.course_img {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+a {
+    color: #4183c4;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover {
+    color: var(--color-primary) !important;
+}
+
+.course_img img {
+    width: 100%;
+    border-radius: 5px;
+    float: left;
+    position: relative;
+}
+
+.course_img img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.course-overlay {
+    position: absolute;
+    top: 0;
+    padding: 10px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(transparent, rgba(51, 51, 51, .3) 90%);
+}
+
+.course_content {
+    padding: 10px 5px;
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.course_img {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+.course_img img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.course-overlay {
+    position: absolute;
+    top: 0;
+    padding: 10px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(transparent, rgba(51, 51, 51, .3) 90%);
+}
+
+.course-overlay:hover .course_play_btn {
+    color: #fff !important;
+    opacity: 1;
+}
+
+.badge_instructor {
+    border-radius: 3px;
+    font-size: 10px;
+    position: absolute;
+    padding: 2px 10px;
+    background: var(--color-primary);
+    border: none;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    line-height: 1.5;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
+    top: 10px;
+    z-index: 2;
+    vertical-align: baseline;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: 0 0 1px 1px rgba(20, 23, 28, .1), 0 3px 1px 0 rgba(20, 23, 28, .1);
+}
+
+.badge_instructor:after {
+    background: inherit;
+    content: '';
+    height: 12px;
+    position: absolute;
+    top: 3px;
+    transform: rotate(45deg);
+    width: 12px;
+    z-index: 1;
+    display: block;
+    left: -5px;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.course_play_btn {
+    border: 0;
+    width: 50px;
+    height: 50px;
+    float: left;
+    text-align: center;
+    border-radius: 100%;
+    padding: 15px 13px;
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    top: 40%;
+    right: 40%;
+    opacity: 0;
+    background: rgba(51, 51, 51, 0.8);
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.course-overlay:hover .course_play_btn {
+    color: #fff !important;
+    opacity: 1;
+}
+
+.course_timer {
+    bottom: 0;
+    position: absolute;
+    margin-bottom: 10px;
+    right: 0;
+    margin-right: 10px;
+    color: #fff;
+    background: rgba(51, 51, 51, 0.8);
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.course_dots {
+    position: absolute;
+    right: 0;
+}
+
+.course_dots a {
+    font-size: 20px;
+    color: #afafaf !important;
+}
+
+.course_dots a:hover {
+    color: #06b106 !important;
+}
+
+.more_dropdown:hover .course_dots {
+    background-color: #06b106;
+}
+
+.course_dots10 {
+    top: 5px;
+}
+
+.more_dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 2px 3px 0 rgba(34, 36, 38, .15);
+    border: 1px solid rgba(34, 36, 38, .15);
+    z-index: 1;
+    right: 0;
+    border-radius: 5px;
+}
+
+.dropdown-content span {
+    color: #686f7a;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+
+.dropdown-content span i {
+    margin-right: 6px;
+    font-size: 115%;
+}
+
+.dropdown-content span:hover {
+    color: #333 !important;
+    background-color: #ffecec;
+}
+
+.more_dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.more_dropdown:hover .course_dots {
+    background-color: #333;
+}
+
+
+.course_name {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    text-align: left;
+    margin-bottom: 7px;
+    line-height: 24px;
+}
+
+.course_category {
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    color: #686f7a;
+    text-align: left;
+    padding-top: 2px;
+}
+
+
+.author_and_price {
+    float: left;
+    width: 100%;
+    margin-top: 18px;
+}
+
+.author_name {
+    margin-bottom: 0;
+    margin-top: 18px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    float: left;
+    color: #686f7a;
+    text-align: left;
+    line-height: 24px;
+}
+
+.author_name a {
+    color: #333;
+    font-weight: 500;
+}
+
+.author_name a:hover {
+    color: #333 !important;
+    text-decoration: underline !important;
+}
+
+.course_price {
+    float: right;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    text-align: right;
+}
+
+.course_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /*grid-gap: 10px;*/
+    /*padding: 10px;*/
+}
+
+@media (max-width: 1200px) {
+    .course_grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+}
+
+@media (max-width: 770px) {
+    .course_grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 990px) {
+    .course_grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+
+    }
+
+    .entprep-card {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+.mt-50 {
+    margin-top: 50px !important;
+}
+
+.first_container {
+    margin-top: 100px !important;
+}
+
+.banner_image {
+    margin-top: -20px;
+}
+
+@media (min-width: 768px) {
+    .col-md-3 {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .col-md-3 {
+        flex: 0 0 30%;
+        max-width: 30% !important;
+    }
+}
+
+
+@media (max-width: 990px) {
+    .col-md-3 {
+        /*margin-top: 10px !important;*/
+        flex: 0 0 40%;
+        max-width: 40% !important;
+    }
+}
+
+.wrapper {
+    padding: 90px 0 0;
+    transition: all 0.3s ease-out;
+    padding-right: 3%;
+}
+
+
+.course_preview {
+    padding: 60px 0 0 !important;
+}
+
+.course_preview_background {
+    float: left;
+    width: 100%;
+    background: #333;
+    padding: 30px 0;
+}
+
+.course_preview_section_left {
+    float: left;
+    width: 100%;
+}
+
+.preview_video {
+    background: #fff;
+    padding: 10px;
+    float: left;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.course_preview_title {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    background: rgba(51, 51, 51, 0.9);
+    left: 0;
+    right: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 10px 0;
+}
+
+.course_preview_wishlist_report {
+    width: 100%;
+    float: left;
+}
+
+.course_preview_wishlist {
+    margin-top: 30px;
+    color: #f3f3f3;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    float: left;
+    margin-right: 30px;
+}
+
+.course_preview_wishlist:hover {
+    color: #06EC06 !important;
+}
+
+.course_preview_wishlist i {
+    font-size: 120%;
+    margin-right: 5px;
+}
+
+.course_preview_report_abuse {
+    margin-top: 30px;
+    color: #f3f3f3;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    float: left;
+}
+
+.course_preview_report_abuse:hover {
+    color: #06EC06 !important;
+}
+
+.course_preview_report_abuse i {
+    font-size: 120%;
+    margin-right: 5px;
+}
+
+
+.course_preview_course_name h2 {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    text-align: left;
+    line-height: normal;
+    margin-bottom: 15px;
+}
+
+.course_preview_course_des {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    color: #f7f7f7;
+    text-align: left;
+    line-height: 26px;
+}
+
+.course_preview_modified_date {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+}
+
+.course_preview_language_caption {
+    display: flex;
+    margin-top: 15px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+}
+
+.course_preview_language {
+    margin-right: 20px;
+}
+
+.course_preview_caption i {
+    font-size: 120%;
+}
+
+.caption_tooltip {
+    display: inline-block;
+    position: relative;
+}
+
+.caption_tooltip:hover {
+    text-decoration: underline;
+    color: #f7f7f7;
+    cursor: pointer;
+}
+
+.caption_tooltip:hover .caption-content {
+    display: block;
+}
+
+.caption-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0 2px 3px 0 rgba(34, 36, 38, .15);
+    border: 1px solid rgba(34, 36, 38, .15);
+    z-index: 1;
+    right: 0;
+    border-radius: 5px;
+}
+
+.caption-content span {
+    color: #686f7a;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    padding: 5px 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.caption-content span i {
+    margin-right: 6px;
+    font-size: 115%;
+}
+
+.course_preview_cart_buy {
+    width: 100%;
+    margin-top: 27px;
+}
+
+.course_preview_cart_buy li {
+    display: inline-block;
+}
+
+
+.btn_adcart {
+    height: 40px;
+    border: 0;
+    padding: 0 20px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    background: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    margin-right: 6px;
+}
+
+.btn_adcart:hover {
+    background: #058005;
+    border: 1px solid #058005;
+}
+
+.btn_buy {
+    height: 40px;
+    border: 0;
+    padding: 0 25px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    background: transparent;
+    border: 1px solid #fff;
+}
+
+.btn_buy:hover {
+    color: #fff;
+    background: var(--color-primary);
+    border: 1px solid #06b106;
+}
+
+.money_back {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+}
+
+.course_preview_content_section {
+    float: left;
+    width: 100%;
+    padding: 20px 0 0;
+    background: #fff;
+    margin-bottom: 17px;
+}
+
+.instructor_data {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.instructor_data_left {
+    float: left;
+}
+
+.live_instructor_data {
+    float: left;
+    width: 100%;
+    display: flex;
+}
+
+.live_instructor_data h4 {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    color: #333 !important;
+    margin-top: 0;
+    margin-bottom: 10px !important;
+}
+
+.instructor_thumbnail {
+    text-align: left;
+}
+
+.instructor_thumbnail img {
+    text-align: left;
+    width: 50px !important;
+    height: 50px !important;
+    display: inline-block !important;
+    border-radius: 100%;
+    margin-right: 15px;
+    border: 2px solid #fff;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.course_preview_instructor_name {
+    margin-top: 15px !important;
+}
+
+.instructor_name {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    color: #333 !important;
+    margin-top: 0;
+    display: block;
+    margin-bottom: 10px !important;
+}
+
+.instructor_name:hover {
+    color: #06b106 !important;
+}
+
+.subscribe-btn {
+    border: 0;
+    background: var(--color-primary);
+    padding: 0 20px;
+    height: 30px;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+.subscribe-btn:active {
+    outline: none;
+}
+
+.subscribe-btn:visited {
+    outline: none;
+}
+
+.course_tabs {
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.course_tabs .nav-item {
+    margin-bottom: 0 !important;
+}
+
+.course_tabs .nav-tabs .nav-item.show .nav-link, .course_tabs .nav-tabs .nav-link.active {
+    color: #333 !important;
+    background-color: transparent !important;
+    border-color: inherit !important;
+    border-top: 0 !important;
+    border-bottom: 2px solid var(--color-primary) !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+}
+
+.course_tabs .nav-tabs {
+    border-bottom: 0 !important;
+}
+
+.tab_course .nav-link {
+    border-top: 0 !important;
+    border-bottom: 2px solid transparent !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    color: #333 !important;
+    font-weight: 500 !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.tab_course .nav-link {
+    padding: .5rem 1.5rem !important;
+}
+
+.course_content_section {
+    float: left;
+    width: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.course_preview_about_tab {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.course_about_details h3 {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.course_about_details ul li {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.course_about_details ul li:last-child {
+    margin-bottom: 0;
+}
+
+. p {
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #686f7a;
+    text-align: left;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    line-height: 26px;
+}
+
+
+.mt-35 {
+    margin-top: 35px;
+}
+
+
+.course_about_outcome {
+    background: #fff;
+    padding: 30px;
+    border: 1px solid #efefef;
+    border-radius: 10px;
+}
+
+.course_about_outcome h3 {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.course_preview_content {
+    float: left;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.course_preview_content h3 {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    margin-bottom: 15px;
+    color: #333;
+    float: left;
+}
+
+.course_preview_content_info {
+    float: right;
+    padding-top: 3px;
+}
+
+.accordion-expand-holder li {
+    display: inline-block;
+    margin-right: 30px;
+    vertical-align: middle;
+}
+
+.accordion-expand-holder li:last-child {
+    margin-right: 0;
+}
+
+
+.course_preview_content_info_style {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    margin-bottom: 0;
+    color: #686f7a;
+}
+
+
+.ui-accordion {
+    margin-top: 4px;
+    float: left;
+    width: 100%;
+}
+
+.accordion-header {
+    float: left;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: solid 1px #efefef;
+    cursor: pointer;
+    height: auto;
+    margin-top: 3px;
+    padding: 15px 30px 15px 20px;
+    background: #fff;
+    border-radius: 0px;
+}
+
+.accordion-header .section-header-left {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 65%;
+}
+
+.accordion-header .section-title-wrapper {
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    color: #505763;
+    flex: 1 1 auto;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.accordion-header .section-title-text {
+    font-size: 16px;
+    padding-left: 8px;
+    padding-right: 10px;
+    color: #333;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.accordion-header .section-header-right {
+    display: flex;
+    justify-content: flex-end;
+    color: #505763;
+    flex-basis: 40%;
+}
+
+.accordion-header .num-items-in-section {
+    display: block;
+    margin-right: 20px;
+    white-space: nowrap;
+    font-size: 16px;
+    color: #686f7a;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+}
+
+.accordion-header .section-header-length {
+    text-align: right;
+    width: 42%;
+    font-size: 16px;
+    color: #686f7a;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+}
+
+.crse_icon {
+    font-size: 110%;
+    margin-right: 5px;
+}
+
+.ui-accordion-content {
+    float: left;
+    width: 100%;
+    border-left: 1px solid #efefef;
+    border-right: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+    background: #fff;
+}
+
+.ui-accordion-content .lecture-container {
+    display: flex;
+    padding: 12px 30px 12px 20px;
+    background-color: #fff;
+    border-top: none;
+    color: #686f7a;
+    letter-spacing: .3px;
+    line-height: 1.33;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ui-accordion-content .left-content {
+    display: flex;
+    align-items: flex-start;
+    width: 50%;
+}
+
+.ui-accordion-content .icon_course_topic {
+    font-size: 18px;
+    line-height: 18px;
+    color: #afafaf;
+}
+
+.ui-accordion-content .top {
+    flex-direction: column-reverse;
+    display: flex;
+    margin-left: 10px;
+    width: 100%;
+}
+
+.ui-accordion-content .title {
+    color: #686f7a;
+    font-size: 14px;
+    margin-top: -2px;
+}
+
+.ui-accordion-content .details {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-left: auto;
+    width: 50%;
+    font-size: 14px;
+}
+
+.ui-accordion-content .content-summary {
+    color: #686f7a;
+    flex-direction: row-reverse;
+    display: flex;
+    text-align: right;
+    white-space: nowrap;
+    width: 40%;
+}
+
+.ui-accordion-content .preview-text {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+.ui-accordion-content .preview-text:hover {
+    color: var(--color-primary) !important;
+}
+
+.accordion-header .section-header-left {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 65%;
+}
+
+/*video model start*/
+.preview_video_model .close {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    color: #fff;
+    margin-left: auto;
+    z-index: 1;
+}
+
+.preview_video_model .close:hover {
+    color: #fff;
+}
+
+.preview_video_model .modal-body {
+    padding: 0 !important;
+}
+
+.preview_video_model .modal-content {
+    border-radius: 0 !important;
+}
+
+.preview_video_model .modal-body iframe {
+    width: 100%;
+    height: 375px;
+    margin-bottom: -5px;
+}
+
+/*Profile dropdown*/
+
+.header_right {
+    margin-left: auto;
+    float: right;
+    padding-right: 15px;
+}
+
+.header_right ul li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.account_dropdown img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+.menu.dropdown_account {
+    margin-top: 11px !important;
+    border-top: 1px solid #fff !important;
+    border-radius: 3px !important;
+}
+
+.profile_dropdown_content {
+    padding: 15px !important;
+    border-bottom: 1px solid #efefef !important;
+    min-width: 100%;
+    max-width: 100%;
+    white-space: normal;
+}
+
+.profile_dropdown_content:last-child {
+    border-bottom: 0 !important;
+}
+
+.profile_link {
+    display: flex;
+}
+
+.profile_link img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+.pd_content {
+    width: 80%;
+    white-space: normal;
+}
+
+.pd_content h6 {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 5px;
+    color: #333;
+    text-align: left;
+    position: relative;
+}
+
+.pd_content span {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 0;
+    color: #686f7a;
+    text-align: left;
+}
+
+.pd_content p {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 8px;
+    color: #686f7a;
+    text-align: left;
+    margin-top: 8px;
+    line-height: 20px;
+}
+
+.pd_content span.nm_time {
+    font-size: 12px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 0;
+    color: #afafaf;
+    text-align: left;
+}
+
+.pd_name {
+    display: flex;
+}
+
+.pd_verify i {
+    font-size: 18px;
+    line-height: 15px;
+    color: #1da1f2;
+}
+
+.ui.dropdown .menu > .channel_item {
+    color: #686f7a !important;
+    padding: .78571429rem 1.14285714rem !important;
+    font-size: 14px !important;
+    font-family: 'Roboto', sans-serif;
+}
+
+.ui.dropdown .menu > .channel_item:hover {
+    color: #333 !important;
+    background: #c8eab7 !important;
+}
+
+/*Profile dropdown end*/
+
+#id_course_duration {
+    width: 50%;
+    display: inline-block;
+}
+
+#id_topic_duration {
+    width: 50%;
+    display: inline-block;
+}
+
+/*Vertical menu dashboard start*/
+
+.left_section {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.menu_left::-webkit-scrollbar {
+    width: 4px;
+}
+
+.menu_left::-webkit-scrollbar-thumb {
+    height: 50px;
+    background: hsla(0, 0%, 53.3%, 0.4);
+}
+
+.left_section {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.vertical_nav ul li {
+    list-style-type: none;
+}
+
+.left_section {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.left_section:last-child {
+    border-bottom: 0;
+}
+
+.menu_left::-webkit-scrollbar {
+    width: 4px;
+}
+
+.menu_left::-webkit-scrollbar-thumb {
+    height: 50px;
+    background: hsla(0, 0%, 53.3%, 0.4);
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+@media (min-width: 992px) {
+    .vertical_nav {
+        left: -40px !important;
+    }
+
+    .vertical_nav__opened {
+        left: -40px !important;
+        box-shadow: none !important;
+    }
+}
+
+.collapse_menu {
+    background: var(--color-primary) !important;
+}
+
+.menu--link:hover, .menu--link:hover .menu--label {
+    background: #e7e6e6 !important;
+}
+
+/*.menu--link{*/
+/*    color: var(--color-primary) !important;*/
+/*}*/
+/*.menu--label{*/
+/*    color: var(--color-secondary) !important;*/
+/*}*/
+
+.menu--link, .menu--link .menu--label {
+    padding-left: 10px !important;
+}
+
+.menu--link.active {
+    background: #e7e6e6 !important;
+    color: var(--color-primary) !important;
+}
+
+.menu--link:hover {
+    background: #e7e6e6;
+    color: var(--color-primary) !important;
+}
+
+.menu--label:hover {
+    background: #e7e6e6;
+    color: var(--color-primary) !important;
+}
+
+.wrapper__minify {
+    margin-left: 60px;
+}
+
+@media (min-width: 992px) {
+    .wrapper {
+        margin-left: 240px;
+    }
+
+    .wrapper__minify {
+        margin-left: 60px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container-fluid {
+        margin-right: 40px !important;
+        padding-left: 30px !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container-fluid {
+        padding-right: 30px !important;
+        padding-left: 30px !important;
+    }
+}
+
+
+/* Vertical menu dashboard end*/
+
+/* Dashboard Content Start*/
+
+
+.instructor_dashboard_title {
+    font-size: 20px;
+    margin-top: 0 !important;
+    margin-bottom: 8px !important;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+.card_dash {
+    background: #fff;
+    margin-top: 30px;
+    float: left;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #efefef;
+    padding: 20px;
+}
+
+.card_dash_left {
+    float: left;
+}
+
+.card_dash_left h5 {
+    font-size: 16px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.card_dash_left h2 {
+    font-size: 24px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    margin-bottom: 15px;
+    text-align: left;
+    margin-top: 0;
+}
+
+.card_dash_left span {
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    background: #efefef;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.card_dash_left1 {
+    float: left;
+    display: flex;
+    padding: 4px 0;
+}
+
+.card_dash_left1 h1 {
+    font-size: 24px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    margin-bottom: 0 !important;
+    text-align: left;
+    margin-top: 0;
+}
+
+.card_dash_left1 i {
+    font-size: 30px;
+    margin-right: 10px;
+    color: #686f7a;
+}
+
+.card_background1 {
+    background: #ffc136 !important;
+}
+
+.card_background2 {
+    background: #c182f9 !important;
+}
+
+.card_background3 {
+    background: #ffa052 !important;
+}
+
+.card_background4 {
+    background: #cca1ff !important;
+}
+
+.card_dash_right1 {
+    float: right;
+}
+
+.card_dash_right {
+    float: right;
+    padding: 15px 0;
+}
+
+.card_dash_right img {
+    width: 70px;
+}
+
+.card_dash1 {
+    background: #fff;
+    margin-top: 30px;
+    float: left;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #efefef;
+    padding: 30px 20px;
+}
+
+.card_dash_left1 {
+    float: left;
+    display: flex;
+    padding: 4px 0;
+}
+
+.card_dash_left1 h1 {
+    font-size: 24px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    margin-bottom: 0 !important;
+    text-align: left;
+    margin-top: 0;
+}
+
+.card_dash_left1 i {
+    font-size: 30px;
+    margin-right: 10px;
+    color: #686f7a;
+}
+
+.create_btn_dash {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: var(--color-primary);
+    padding: 0px 20px;
+    border-radius: 25px;
+    border: 0;
+    height: 40px;
+}
+
+.btn-home {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-primary);
+    background: #fff;
+    padding: 5px 20px;
+    padding-top: 7px;
+    border-radius: 25px;
+    border: 0;
+    height: 40px;
+}
+
+.create_btn_dash:hover {
+    color: #fff;
+    background: #333;
+}
+
+.btn-home:hover {
+    color: gray !important;
+    background: #fff !important;
+    border: 2px solid gray !important;
+    transition-timing-function: ease-in;
+
+}
+
+@media (min-width: 990px ) {
+
+    .main-header {
+        /*padding-left: 2%;*/
+        margin-left: -2.2% !important;
+        z-index: 100;
+    }
+
+}
+
+@media (max-width: 990px) {
+
+    .main-header {
+        /*padding-left: 2%;*/
+        margin-left: -2.8% !important;
+        z-index: 100;
+    }
+
+}
+
+/*@media (min-width: 990px ) {*/
+
+/*    .main-header {*/
+/*        !*padding-left: 2%;*!*/
+/*        margin-left: -2.7% !important;*/
+/*        z-index: 100;*/
+/*    }*/
+
+/*}*/
+
+/*@media (min-width: 600px) and(max-width: 990px) {*/
+
+/*    .main-header {*/
+/*        !*padding-left: 2%;*!*/
+/*        margin-left: -7.8% !important;*/
+/*        z-index: 100;*/
+/*    }*/
+/*}*/
+/*@media (max-width: 600px) {*/
+
+/*    .main-header {*/
+/*        !*padding-left: 2%;*!*/
+/*        margin-left: -4.8% !important;*/
+/*        z-index: 100;*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 400px) {*/
+
+/*    .main-header {*/
+/*        !*padding-left: 2%;*!*/
+/*        margin-left: -7.8% !important;*/
+/*        z-index: 100;*/
+/*    }*/
+/*}*/
+
+
+/*Dashboard Content End*/
+
+/*Cart functionality*/
+/*Header cart*/
+
+.header-cart {
+    font-size: 25px !important;
+    margin-right: -2% !important;
+}
+
+#cart-target {
+    position: relative;
+    width: 600px;
+    height: 300px;
+    border-style: solid;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+/*Cart functionality End*/
+
+
+/*Admin dashboard Start*/
+
+.admin-wrapper {
+    padding: 0 !important;
+    transition: all 0.3s ease-out;
+    padding-right: 3%;
+}
+
+/*Admin Dashboard End*/
+
+
+/*Footer start*/
